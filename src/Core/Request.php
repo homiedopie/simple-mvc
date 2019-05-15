@@ -164,7 +164,6 @@ class Request
             return $this->pathInfo;
         }
 
-        var_dump($this->server);
         $url = isset($this->server['REQUEST_URI']) ? parse_url($this->server['REQUEST_URI']) : null;
         return $this->pathInfo = $url !== false ? $url['path']: null;
     }
